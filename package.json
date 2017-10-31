@@ -1,0 +1,57 @@
+{
+  "name": "enzyme-mocha-test",
+  "version": "1.0.0",
+  "description": "enzyme mocha test",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.7.2",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "mocha": "^3.5.3",
+    "node-sass": "^4.5.3",
+    "react-test-renderer": "^15.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2",
+    "webpack-merge": "^4.1.0"
+  },
+  "scripts": {
+    "test": "mocha --require babel-polyfill --compilers jsx:babel-register",
+    "build": "webpack --config webpack.prod.js",
+    "eslint": "eslint \"./src/**/*.js\" \"./src/**/*.jsx\" \"./test/**/*.js\"",
+    "eslint-fix": "eslint --fix \"./src/**/*.js\" \"./src/**/*.jsx\" \"./test/**/*.js\"",
+    "stylelint": "stylelint \"./src/styles/**/*.scss\" --config ./.stylelintrc --ignore-path ./.stylelintignore",
+    "stylelint-fix": "stylelint --fix \"./src/styles/**/*.scss\" --config ./.stylelintrc --ignore-path ./.stylelintignore",
+    "lint": "npm run eslint && npm run stylelint",
+    "lint-fix": "npm run eslint-fix && npm run stylelint-fix",
+    "start": "webpack-dev-server --open --config webpack.dev.js"
+  },
+  "keywords": [
+    "enzyme",
+    "mocha"
+  ],
+  "author": "Zhang, Jilin",
+  "license": "MIT"
+}
